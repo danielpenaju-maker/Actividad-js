@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Generador de Nombres Mágicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container" role="main">
+    <section class="card" aria-labelledby="titulo">
+      <h1 id="titulo" class="title">Generador de Nombres Mágicos ✨</h1>
+
+      <p class="subtitle">Escribe tu nombre y descubre tu alias encantado.</p>
+
+      <form id="magicForm" class="form" autocomplete="off">
+        <label for="nombre" class="label">Nombre</label>
+        <div class="inputWrap">
+          <input id="nombre" name="nombre" class="input" type="text" placeholder="Ej. Valentina" aria-label="Nombre" maxlength="60" />
+          <button class="btn primary" id="generar" type="submit">Generar</button>
+        </div>
+        <small class="hint">Reglas: &lt;4 letras → +"ius" • 4-6 → invertir +"Or" • &gt;6 → vocales → "æ" + prefijo "Zy" y sufijo "on"</small>
+      </form>
+
+      <div id="resultadoCard" class="resultado" aria-live="polite" hidden>
+        <p class="resultadoLabel">✨ Tu nombre mágico:</p>
+        <p id="resultado" class="resultadoText"></p>
+        <div class="actions">
+          <button id="copiar" class="btn outline">Copiar</button>
+          <button id="reset" class="btn ghost">Limpiar</button>
+        </div>
+      </div>
+
+      <p class="foot">Hecho para práctica — presenta en clase el próximo miércoles.</p>
+    </section>
+
+    <div class="attribution">Hecho con ❤️ — <small>JavaScript · HTML · CSS</small></div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
